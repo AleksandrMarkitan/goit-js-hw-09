@@ -76,33 +76,6 @@ function timerOn() {
   }, timerStep);
 }
 
-// function markap() {
-//   ms -= 1000;
-//   const { days, hours, minutes, seconds } = convertMs(ms);
-
-//   const newMarkup = (refs.timerDiv.innerHTML = `<div class="field">
-//         <span class="value" data-days>${addLeadingZero(String(days))}</span>
-//         <span class="label">Days</span>
-//       </div>
-//       <div class="field">
-//         <span class="value" data-hours>${addLeadingZero(String(hours))}</span>
-//         <span class="label">Hours</span>
-//       </div>
-//       <div class="field">
-//         <span class="value" data-minutes>${addLeadingZero(
-//           String(minutes)
-//         )}</span>
-//         <span class="label">Minutes</span>
-//       </div>
-//       <div class="field">
-//         <span class="value" data-seconds>${addLeadingZero(
-//           String(seconds)
-//         )}</span>
-//         <span class="label">Seconds</span>
-//       </div>`);
-//   return newMarkup;
-// }
-
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
