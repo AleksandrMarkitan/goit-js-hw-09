@@ -13,7 +13,9 @@ const refs = {
   startButton: document.querySelector('.start-button'),
   input: document.querySelector('.data-input'),
 };
+
 refs.startButton.setAttribute('disabled', true);
+
 let ms = 0;
 const timerStep = 1000;
 
@@ -38,8 +40,11 @@ flatpickr('#datetime-picker', {
 function onStartButtonHandler() {
   refs.input.setAttribute('disabled', true);
   refs.startButton.setAttribute('disabled', true);
+  timerOn();
+}
 
-  timerId = setInterval(() => {
+function timerOn() {
+  const timerId = setInterval(() => {
     ms -= timerStep;
     if (ms - timerStep < 0) {
       clearInterval(timerId);
