@@ -10,6 +10,7 @@ refs.stopButton.addEventListener('click', onStopButtonHandler);
 let timerId = null;
 function onStartButtonHandler() {
   refs.startButton.setAttribute('disabled', true);
+  refs.stopButton.removeAttribute('disabled');
   timerId = setInterval(
     () => (refs.body.style.backgroundColor = getRandomHexColor()),
     1000
@@ -19,6 +20,7 @@ function onStartButtonHandler() {
 function onStopButtonHandler() {
   clearInterval(timerId);
   refs.startButton.removeAttribute('disabled');
+  refs.stopButton.setAttribute('disabled', true);
 }
 
 function getRandomHexColor() {
